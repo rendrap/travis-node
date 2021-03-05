@@ -5,3 +5,12 @@ services:
 script:
   - docker build -t rendrapradana/node .
   - docker images rendrapradana/node 
+
+before_deploy:
+  - docker login -u rendrapradana -p L2e003448
+
+deploy:
+  provider: script
+  script: docker push rendrapradana/node
+  on:
+    branch: master
