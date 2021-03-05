@@ -4,4 +4,4 @@ services:
 
 script:
   - docker build -t rendrapradana/node .
-  - docker images rendrapradana/nodecd 
+  - docker images rendrapradana/node 
